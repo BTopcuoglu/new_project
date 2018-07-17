@@ -1,3 +1,4 @@
 hello world
 what is up
 add to remote and fetch in server
+now add to remote from server and fetch in local
