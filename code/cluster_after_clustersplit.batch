@@ -1,0 +1,5 @@
+make.shared(list=data/glne007.final.opti_mcc.unique_list.list, count=glne007.final.counts, label=0.03)
+classify.otu(list=data/glne007.final.opti_mcc.unique_list.list, count=glne007.final.counts, taxonomy=glne007.final.taxonomy, label=0.03)
+sub.sample(shared=glne007.final.opti_mcc.unique_list.shared, size=10000)
+filter.shared(shared=glne007.final.opti_mcc.unique_list.0.03.subsample.shared, minpercentsamples=5, makerare=F, minpercent=0.0001)
+system(rm data/*.rabund)

@@ -1,0 +1,15 @@
+remove.lineage(fasta=data/glne007.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta, count=data/glne007.trim.contigs.good.unique.good.filter.unique.precluster.denovo.uchime.pick.count_table, taxonomy=data/glne007.trim.contigs.good.unique.good.filter.unique.precluster.pick.pds.wang.taxonomy, taxon=Chloroplast-Mitochondria-unknown-Archaea-Eukaryota)
+
+get.groups(fasta=data/glne007.trim.contigs.good.unique.good.filter.unique.precluster.pick.pick.fasta, count=data/glne007.trim.contigs.good.unique.good.filter.unique.precluster.denovo.uchime.pick.pick.count_table, taxonomy=data/glne007.trim.contigs.good.unique.good.filter.unique.precluster.pick.pds.wang.pick.taxonomy, groups=mock1-mock2-mock5-mock6-mock7)
+
+system(mv data/glne007.trim.contigs.good.unique.good.filter.unique.precluster.pick.pick.pick.fasta data/mocks.final.fasta)
+system(mv data/glne007.trim.contigs.good.unique.good.filter.unique.precluster.denovo.uchime.pick.pick.pick.count_table data/mocks.final.counts)
+system(mv data/glne007.trim.contigs.good.unique.good.filter.unique.precluster.pick.pds.wang.pick.pick.taxonomy data/mocks.final.taxonomy)
+
+seq.error(fasta=data/mocks.final.fasta, count=data/mocks.final.counts, reference=data/HMP_MOCK.v35.fasta, aligned=F)
+
+remove.groups(fasta=data/glne007.trim.contigs.good.unique.good.filter.unique.precluster.pick.pick.fasta, count=data/glne007.trim.contigs.good.unique.good.filter.unique.precluster.denovo.uchime.pick.pick.count_table, taxonomy=data/glne007.trim.contigs.good.unique.good.filter.unique.precluster.pick.pds.wang.pick.taxonomy, groups=mock1-mock2-mock5-mock6-mock7)
+
+system(mv data/glne007.trim.contigs.good.unique.good.filter.unique.precluster.pick.pick.pick.fasta data/glne007.final.fasta)
+system(mv data/glne007.trim.contigs.good.unique.good.filter.unique.precluster.denovo.uchime.pick.pick.pick.count_table data/glne007.final.counts)
+system(mv data/glne007.trim.contigs.good.unique.good.filter.unique.precluster.pick.pds.wang.pick.pick.taxonomy data/glne007.final.taxonomy)
